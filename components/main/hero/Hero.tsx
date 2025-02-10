@@ -1,7 +1,6 @@
 import React from 'react'
 import HeroContent from '@/components/sub/HeroContent'
 
-
 const Hero = () => {
   return (
     <div className='relative flex flex-col h-full w-full'>

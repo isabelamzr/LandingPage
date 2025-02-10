@@ -1,7 +1,9 @@
+import Contact from "@/components/main/contact/Contact";
 import Encryption from "@/components/main/encryption/Encryption";
 import Hero from "@/components/main/hero/Hero";
 import Navbar from "@/components/main/navbar/Navbar";
 import Skills from "@/components/main/skills/Skills";
+import Workflow from "@/components/main/workflow/Workflow"
 
 
 export default function Home() {
@@ -13,6 +15,9 @@ export default function Home() {
       <Navbar />
       <Skills />
       <Encryption />
+      <Workflow />
+      <Contact />
+      
       </div>
     </main>
   );

@@ -1,93 +1,83 @@
-"use client"
+"use client";
 
-import React from 'react'
-import {motion} from 'framer-motion' 
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
-import { SparklesIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
+import React from "react";
+import { motion } from "framer-motion";
+import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
+import { SparklesIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 const HeroContent = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
     <motion.div
-    initial="hidden"
-    animate="visible"
-    className='flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]'
+      initial="hidden"
+      animate="visible"
+      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
     >
-      <div className='h-full w-full flex flex-col gap-5 justify-center m-auto text-start'>
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
-        variants={slideInFromTop}
-        className='Welcome-box py-[15px] px-[7px] border-[#7042f88b] opacity-[0.9]'>
-
-        <SparklesIcon className='text-[#b49bff] mr-[10px] h-5 w-5'/>
-        <h1 className='Welcome-text text-[13px]'>Creative Developer</h1>
+          variants={slideInFromTop}
+          className="Welcome-box py-[15px] px-[7px] border-[#7042f88b] opacity-[0.9]"
+        >
+          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
+          <h1 className="Welcome-text text-[13px]">Creative Developer</h1>
         </motion.div>
-
-
-
 
         <motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 text-6xl font-bold max-w-[600px] w-auto h-auto"
         >
-
-            
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-
             <span>
-            Welcome!
-            <br />
-            <span className="text-[#FDFEFE] max-w-[600px] w-auto h-auto">
-            {" "}
-            i am 
-            <br />
-        
-            is.mzr  
-          
+              Welcome!
+              <br />
+              <span className="text-[#FDFEFE] max-w-[600px] w-auto h-auto">
+                {" "}
+                i am 
+                <br />
+                is.mzr  
+              </span>
+              <br />
+              Isabela Muñoz 
             </span>
-            <br />
-            Isabela Muñoz 
-            </span>
-
           </span>
-          
         </motion.div>
 
-    
+        <motion.p
+          variants={slideInFromLeft(0.8)}
+          className="text-lg text-gray-400 my-5 max-w-[600px]"
+        >
+          I&apos;m a front-end creative developer &amp; 3D motion designer enthusiastic. Check out my projects and skills.
+        </motion.p>
 
-       <motion.p  variants = {slideInFromLeft(0.8)}
-       className='text-1g text-gray-400 my-5 max-w-[600px]'
-       >
-        I&apos;m a front-end creative developer &
-        3D motion designer enthusiastic. Check out my projects and skills. 
-       </motion.p>
-
-       <motion.a 
-       variants={slideInFromLeft(1)}
-       className='py-2 button-primary text-center text-white cursor-pointer rounded-1g max-w-[200px]'
-       >
-        Learn more!
-       </motion.a>
-
+        <motion.a
+          variants={slideInFromLeft(1)}
+          href="https://github.com/isabelamzr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+        >
+          Learn more!
+        </motion.a>
       </div>
 
-    <motion.div
-    variants={slideInFromRight(0.8)}
-    className='w-full h-full flex justify-center items-center'
-    >
-
-       <Image 
-       src="/habilidades.svg"
-       alt="work  icons"
-       height={650}
-       width={650}
-       style={{ marginTop: '-100px' }}
-       /> 
-       
-
+      <motion.div
+        variants={slideInFromRight(0.8)}
+        className="w-full h-full flex justify-center items-center"
+      >
+        <Image
+          src="/habilidades.svg"
+          alt="work icons"
+          height={650}
+          width={650}
+          style={{ marginTop: "-100px" }}
+          className={isMobile ? 'hidden' : ''}
+        />
+      </motion.div>
     </motion.div>
+  );
+};
 
-    </motion.div>
-  )
-}
-
-export default HeroContent
+export default HeroContent;

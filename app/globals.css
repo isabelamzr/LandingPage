@@ -20,7 +20,7 @@
 }
 .Welcome-box {
   isolation: isolate;
-  overflow: hidden;
+  overflow: visible !important;
   align-items: center;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
@@ -53,10 +53,10 @@
   box-shadow: inset 0 0 12px #bf97ff70;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
+
 .scrollbar-hidden {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
