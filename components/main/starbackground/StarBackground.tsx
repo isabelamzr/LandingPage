@@ -7,9 +7,7 @@ import * as THREE from "three";
 import * as random from "maath/random";
 
 const StarBackground = () => { 
-    // 🔹 Corrigindo a referência para `<Points>` corretamente
     const ref = useRef<THREE.Points>(null);
-
     const [sphere] = useState<Float32Array>(() =>
         new Float32Array(random.inSphere(new Float32Array(5000), { radius: 1.2 }))
     );

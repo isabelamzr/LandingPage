@@ -11,13 +11,14 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.1.5",
-    "framer-motion": "latest version number",
+    "framer-motion": "^12.4.1",
     "lucide-react": "^0.475.0",
     "next": "14.2.12",
     "react": "^18",
     "react-dom": "^18",
-    "react-intersection-observer": "latest version number",
-    "react-responsive": "^10.0.0"
+    "react-intersection-observer": "^9.15.1",
+    "react-responsive": "^10.0.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@react-three/drei": "^9.112.0",
@@ -25,11 +26,10 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "critters": "^0.0.25",
     "eslint": "^8",
     "eslint-config-next": "14.2.12",
-    "framer-motion": "^12.4.1",
     "postcss": "^8",
-    "react-intersection-observer": "^9.15.1",
     "tailwindcss": "^3.4.1",
     "three": "^0.168.0",
     "typescript": "^5"

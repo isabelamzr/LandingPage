@@ -23,6 +23,7 @@ const SkillDataProvider = ({src, width, height, index} : Props) => {
     }
 
     const animationDelay = 0.3
+    
   return (
    <motion.div
     ref={ref}

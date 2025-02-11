@@ -47,10 +47,17 @@ const Contact: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!formRef.current) return;
+
     emailjs
-      .sendForm("service_avwofsc", "template_d5br2xq", formRef.current!, {
-        publicKey: "E0ahdd3CvF7y1cGsD",
-      })
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        }
+      )
       .then(
         () => {
           setStatus({
@@ -78,7 +85,7 @@ const Contact: React.FC = () => {
 
   const handleWhatsAppClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.open("https://wa.me/5531984742961", "_blank");
+    window.open(process.env.NEXT_PUBLIC_WHATSAPP_URL!, "_blank");
   };
 
   return (
